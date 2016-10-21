@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        article, aside, figure, footer, header, body,
+        menu, nav, section { display: block; }
+
+        html {
+            font:90%/1.5 arial,sans-serif;
+            background: rgba(19, 26, 62, 0.91);
+            color: #d703ff;
+            border: 4px solid #1cff00;
+        }
+
+
+    </style>
+        <script>
+        function convert(degree) {
+            var x;
+            if (degree == "C") {
+                x = document.getElementById("c").value * 9 / 5 + 32;
+                document.getElementById("f").value = Math.round(x);
+            } else {
+                x = (document.getElementById("f").value -32) * 5 / 9;
+                document.getElementById("c").value = Math.round(x);
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Convert Temperatures Between Fahrenheit and Celsius</title>
+</head>
+
+<header> <h1> Please type in a number into the boxes below. </h1> </header>
+<body>
+
+
+<fieldset style="background: #00f3ff">
+<p><input id="c" onkeyup="convert('C')"> degrees Celsius</p>
+
+</fieldset>
+<b>Equals</b>
+
+<fieldset style="background: #ff9135">
+<p><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</p>
+
+</fieldset>
+
+    <a>
+       <img src="Icy Hot.png" alt="TEMP!" height="200" width="200">
+
+    </a>
+</body>
+</html>
